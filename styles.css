@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+}
+
+body {
+    background: #f8ebe9;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+.container-all {
+    width: 1100px;
+    height: 100vh;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-card {
+    position: relative;
+    display: flex;
+    background: white;
+    height: 75vh;
+    min-height: 700px;
+    border-radius: 5px;
+    box-shadow: #d6a29a 0px 50px 100px -20px, #c9aaa6 0px 30px 60px -30px;
+    overflow: hidden;
+}
+
+.bg-img-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: 100%;
+    width: 35%;
+    margin: none;
+}
+
+.bg-img {
+    width: 100%;
+    height: 100%;
+}
+
+.back-button {
+    position: absolute;
+    z-index: 1;
+    top: 2em;
+    left: 2em;
+    color: black;
+    opacity: 0.5;
+    transition: opacity 0.15s;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.back-button:hover {
+    opacity: 1;
+}
+
+.back-button::before,
+.overview--preview a::after {
+    content: "";
+    width: 1.3em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+}
+
+.back-button::before {
+    margin-right: 0.5em;
+    background: url("img/arrow-back.svg");
+    background-size: 100%;
+    background-position: center;
+    transition: transform 0.15s;
+}
+
+.back-button:hover::before {
+    transform: translateX(-5px);
+}
+
+.container-main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    padding-left: 75px;
+}
+
+.places {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2em 2em;
+}
+
+.place {
+    padding: 0 1em;
+    font-weight: 500;
+    font-size: 0.9em;
+    opacity: 0.5;
+    transition: opacity 0.15s, transform 0.15s;
+    cursor: pointer;
+}
+
+.place.selected,
+.place:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.main-text {
+    margin-top: 5vh;
+}
+
+.header {
+    position: relative;
+    margin: 0;
+    padding-right: 1em;
+    font-size: 3.5em;
+    font-weight: normal;
+    overflow: hidden;
+    line-height: 1.2em;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    bottom: 0.5em;
+    margin-left: 0.3em;
+    height: 4px;
+    width: 2em;
+    vertical-align: middle;
+    background: black;
+}
+
+.header,
+.name {
+    font-family: "Playfair Display", sans-serif;
+}
+
+span {
+    font: inherit;
+    font-weight: 700;
+}
+
+.name {
+    margin: 2em 0 3em;
+}
+
+.info {
+    display: flex;
+}
+
+.preview {
+    display: flex;
+    flex-direction: column;
+}
+
+.video {
+    position: relative;
+    width: 200px;
+}
+
+.preview-image {
+    width: 100%;
+}
+
+.preview-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+
+.preview-icon:hover {
+    transform: scale(1.2);
+}
+
+.view-all {
+    margin: 1em 0;
+    font-weight: 600;
+    color: black;
+    opacity: 0.5;
+    transition: opacity 0.15s;
+}
+
+.view-all::after {
+    content: "";
+    width: 1.3em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.5em;
+    background: url("img/arrow-forward.svg");
+    background-size: 100%;
+    background-position: center;
+    transition: transform 0.15s;
+}
+
+.view-all:hover {
+    opacity: 1;
+}
+
+.view-all:hover::after {
+    transform: translateX(5px);
+}
+
+.description {
+    line-height: 1.9;
+    padding: 0 3em;
+    font-weight: 400;
+    max-width: 500px;
+}

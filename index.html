@@ -1,24 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Page</title>
-</head>
-<body>
-  
-  BACK
-  
-NETHERLANDS
-SPAIN
-FRANCE
-  
-  Visiting the pastelle city
-By Jerry Henderson, in Tourism
-  
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="./styles.css" />
+        <title>Travel Blog Page Layout</title>
+    </head>
 
-As you drive into the town from Alicante airport you will pass between two salt lakes - one is blue/green and the other is an impressive pink colour.
-  VIEW ALL PHOTOS
-</body>
+    <body>
+        <div class="container-all">
+            <div class="container-card">
+                <a class="back-button" href="#">Back</a>
+
+                <div class="bg-img-div">
+                    <img src="/img/background.jpeg" alt="" class="bg-img" />
+                </div>
+
+                <div class="container-main">
+                    <div class="places">
+                        <a class="place">Netherlands</a>
+                        <a class="place selected">Spain</a>
+                        <a class="place">France</a>
+                    </div>
+                    <div class="main-text">
+                        <h1 class="header">Visiting the pastelle city</h1>
+                        <div class="name">
+                            By <span>Jerry Henderson</span>, in Tourism
+                        </div>
+                        <div class="info">
+                            <div class="preview">
+                                <div class="video">
+                                    <button class="preview-icon">
+                                        <img src="img/play.svg" />
+                                    </button>
+                                    <img
+                                        class="preview-image"
+                                        src="img/preview.jpeg"
+                                    />
+                                </div>
+                                <a href="#" class="view-all">View all photos</a>
+                            </div>
+                            <div class="description">
+                                As you drive into the town from Alicante airport
+                                you will pass between two salt lakes — one is
+                                blue/green and the other is an impressive pink
+                                colour.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
